@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  client:
+    build: ./client
+    # ports:
+    #   - "8080:8080"
+    volumes:
+      - ./client:/workspace/client:cached
+      - /workspace/client/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+  server:
+    build: ./server
+    # ports:
+    #   - "3000:3000"
+    volumes:
+      - ./server:/workspace/server:cached
+      - /workspace/server/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
