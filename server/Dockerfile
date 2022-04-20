@@ -1,8 +1,10 @@
-FROM node:16
+FROM node:16-slim
 
-# WORKDIR /workspace/server
+WORKDIR /workspace
 
-# RUN npm install
+COPY ./package*.json ./
+
+RUN npm install
 
 # COPY . .
 

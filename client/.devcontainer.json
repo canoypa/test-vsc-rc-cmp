@@ -2,5 +2,5 @@
   "name": "Client",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "client",
-  "workspaceFolder": "/workspace/client"
+  "workspaceFolder": "/workspace"
 }
